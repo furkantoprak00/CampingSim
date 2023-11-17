@@ -6,19 +6,19 @@ using UnityEngine;
 
 public class GameHUD : NetworkBehaviour
 {
-    Canvalaunchercontrol Canvalaunchercontrol;
+   // Canvalaunchercontrol Canvalaunchercontrol;
 
 
     public override void OnNetworkSpawn()
     {
-        while (Canvalaunchercontrol == null)
-        {
+        //while (Canvalaunchercontrol == null)
+        //{
 
-            if (!IsOwner)
-            { return; }
-            Canvalaunchercontrol = GameObject.Find("VideoPoint").GetComponent<Canvalaunchercontrol>();
+        //    if (!IsOwner)
+        //    { return; }
+        //    Canvalaunchercontrol = GameObject.Find("VideoPoint").GetComponent<Canvalaunchercontrol>();
 
-        }
+        //}
     }
     public void LeaveGame()
     {
@@ -29,11 +29,11 @@ public class GameHUD : NetworkBehaviour
 
         }
         ClientSingleton.Instance.GameManager.Disconnect();
-     //   GameObject.Find("Network Manager").GetComponent<VivoxPlayer>().OnUserLoggedOut();
+        GameObject.Find("Network Manager").GetComponent<VivoxPlayer>().OnUserLoggedOut();
     }
-    public void StartVideo()
-    {
-        Canvalaunchercontrol.Spawner();
-    }
+    //public void StartVideo()
+    //{
+    //    Canvalaunchercontrol.Spawner();
+    //}
    
 }

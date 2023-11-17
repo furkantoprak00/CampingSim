@@ -697,16 +697,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240936803}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1022e7fdc184b5248bdda57a5ca60864, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fd16a0a1f08ebb4aac8556fbc29c3fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _vvm: {fileID: 0}
-  PermissionAskedCount: 0
   VoiceChannelName: SmartLand
-  _nextUpdate: 0
-  xrCam: {fileID: 0}
 --- !u!1 &1647250478
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,16 +876,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874021051}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ccec6cc900e83f41aade135fe997e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 
-  _issuer: 
-  _domain: 
-  _server: 
-  <LoginState>k__BackingField: 0
+  _key: QX7dhCw6EmJWR7QnWPOGDwnlfqTiByCN
+  _issuer: 1ade1-campi-25291-udash
+  _domain: mtu1xp.vivox.com
+  _server: https://mtu1xp-mad.vivox.com
 --- !u!1 &2000799502
 GameObject:
   m_ObjectHideFlags: 0
