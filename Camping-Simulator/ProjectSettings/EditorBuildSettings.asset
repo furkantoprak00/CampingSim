@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/dev_sado/Scenes/Bootstrap.unity
+    guid: 66285f0425a79b94aa6186c5075cd961
+  - enabled: 1
+    path: Assets/dev_sado/Scenes/NetBootstrap.unity
+    guid: 86591761c3c4df94580734094d8e96c1
+  - enabled: 1
+    path: Assets/dev_sado/Scenes/Menu.unity
+    guid: 510583ab5dac58540a09c96f8331f498
+  - enabled: 1
+    path: Assets/Scenes/ForestScene.unity
+    guid: ca6f35ce25f59ec45ac95e7659e12553
   m_configObjects: {}
