@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 7380720177049573206}
   - component: {fileID: 2627402902492366124}
   - component: {fileID: 2310264925284459151}
+  - component: {fileID: -7440702328323455493}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -681,6 +682,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraObject: {fileID: 1284192874138555262}
   localOnlyComponents: []
+--- !u!114 &-7440702328323455493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138449011631542292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07175faccbc3a8c4d986d4d38d559562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 2
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &2746614398334311568
 GameObject:
   m_ObjectHideFlags: 0
