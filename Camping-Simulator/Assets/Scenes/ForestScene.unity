@@ -321,8 +321,9 @@ GameObject:
   - component: {fileID: 1418413810}
   - component: {fileID: 1418413809}
   - component: {fileID: 1418413808}
-  - component: {fileID: 1418413807}
-  - component: {fileID: 1418413812}
+  - component: {fileID: 1418413813}
+  - component: {fileID: 1418413814}
+  - component: {fileID: 1418413815}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -330,31 +331,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1418413807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418413806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c92bc63e51c6524448693a49cef7bdf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 2
-  runSpeed: 5
-  crouchSpeed: 1
-  mouseSensitivity: 2
-  playerInventory: {fileID: 11400000, guid: 03c8988904446544280eb26f1adf18f8, type: 2}
-  playerStats: {fileID: 11400000, guid: 171588c010aec0b4c940953eaf83a13a, type: 2}
-  playerEquipment: {fileID: 11400000, guid: ee3e969bbf046144883e28ea3fc97f71, type: 2}
-  currentHealth: 0
-  currentHunger: 0
-  currentThirst: 0
-  currentTemperature: 0
-  currentMobility: 0
-  currentEnergy: 0
 --- !u!136 &1418413808
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -444,32 +420,60 @@ Transform:
   - {fileID: 831364315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &1418413812
-CharacterController:
+--- !u!114 &1418413813
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418413806}
-  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2850ad56b3eca42ac8160467c34fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  turnSpeed: 360
+--- !u!114 &1418413814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418413806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f30ae2c82a9e6e42bffa6fd070b5c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 360
+--- !u!54 &1418413815
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418413806}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!1 &1610247548
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +592,6 @@ GameObject:
   - component: {fileID: 1883032279}
   - component: {fileID: 1883032278}
   - component: {fileID: 1883032277}
-  - component: {fileID: 1883032281}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -682,19 +685,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1883032281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883032276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b9f41e953e5c0143b488bc2d2cabc0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 1883032276}
 --- !u!1 &2014842398
 GameObject:
   m_ObjectHideFlags: 0
