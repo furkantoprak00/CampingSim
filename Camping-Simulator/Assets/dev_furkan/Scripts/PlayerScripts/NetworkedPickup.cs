@@ -7,6 +7,7 @@ public class NetworkedPickup : NetworkBehaviour
 
     private void Start()
     {
+        Debug.Log("NetworkedPickup script started.");
         isPickedUp.OnValueChanged += OnPickupStateChanged;
     }
 
@@ -24,7 +25,8 @@ public class NetworkedPickup : NetworkBehaviour
 
     private void Update()
     {
-        if (IsLocalPlayer && Input.GetKeyDown(KeyCode.E))
+        Debug.Log("NetworkedPickup Update called.");
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Çalýþtý Obje Alýndý");
             PickupObjectServerRpc();
