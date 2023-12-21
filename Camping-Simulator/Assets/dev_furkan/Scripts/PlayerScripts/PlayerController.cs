@@ -1,7 +1,8 @@
+using Unity.Netcode;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     [SerializeField] private float walkSpeed = 3.0f;
     [SerializeField] private float runSpeed = 6.0f;
@@ -14,6 +15,15 @@ public class PlayerController : MonoBehaviour
     private Vector3 movementInput;
     private bool isRunning = false;
 
+
+    public override void OnNetworkSpawn()
+    {
+        if (!IsOwner)
+        {
+            return; 
+
+        }
+    }
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
