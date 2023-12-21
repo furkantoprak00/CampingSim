@@ -8,7 +8,7 @@ public class NetworkPlayers : NetworkBehaviour
 
     private void Start()
     {
-        if (IsLocalPlayer)
+        if (IsOwner)
         {
             cameraObject.SetActive(true);
             foreach (var component in localOnlyComponents)
