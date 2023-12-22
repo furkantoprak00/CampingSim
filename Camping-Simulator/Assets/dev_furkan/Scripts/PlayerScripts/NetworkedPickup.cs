@@ -1,5 +1,6 @@
 using UnityEngine;
 using Unity.Netcode;
+using UnityEngine.UI;
 
 public class NetworkedPickup : NetworkBehaviour
 {
@@ -7,6 +8,7 @@ public class NetworkedPickup : NetworkBehaviour
 
     private void Start()
     {
+     
         Debug.Log("NetworkedPickup script started.");
         isPickedUp.OnValueChanged += OnPickupStateChanged;
     }

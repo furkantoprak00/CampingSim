@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : NetworkBehaviour
@@ -17,6 +19,7 @@ public class PlayerController : NetworkBehaviour
     private Vector3 movementInput;
     private bool isRunning = false;
 
+    [SerializeField] private List<SlotControl> SlotPanels;
     public override void OnNetworkSpawn()
     {
         if (!IsOwner)
@@ -94,9 +97,19 @@ public class PlayerController : NetworkBehaviour
             if (Physics.Raycast(ray, out hit, interactionDistance))
             {
                 NetworkedPickup networkedPickup = hit.collider.GetComponent<NetworkedPickup>();
+                Image objectImage=hit.collider.GetComponent<Image>();
                 if (networkedPickup != null)
                 {
                     networkedPickup.PickupObjectServerRpc();
+                   foreach (SlotControl item in SlotPanels) 
+                    {
+                        if (item.isFull==false)
+                        {
+                            item.image.sprite = objectImage.sprite;
+                            item.isFull = true;
+                            return;
+                        }
+                    }
                 }
             }
         }
