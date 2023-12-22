@@ -6,23 +6,30 @@ public class NetworkPlayers : NetworkBehaviour
     public GameObject cameraObject;
     public MonoBehaviour[] localOnlyComponents;
 
-    private void Start()
+    //private void Start()
+    //{
+    //    if (IsOwner)
+    //    {
+    //        cameraObject.SetActive(true);
+    //        foreach (var component in localOnlyComponents)
+    //        {
+    //            component.enabled = true;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        cameraObject.SetActive(false);
+    //        foreach (var component in localOnlyComponents)
+    //        {
+    //            component.enabled = false;
+    //        }
+    //    }
+    //}
+    public override void OnNetworkSpawn()
     {
-        if (IsOwner)
-        {
-            cameraObject.SetActive(true);
-            foreach (var component in localOnlyComponents)
-            {
-                component.enabled = true;
-            }
-        }
-        else
+        if (!IsOwner)
         {
             cameraObject.SetActive(false);
-            foreach (var component in localOnlyComponents)
-            {
-                component.enabled = false;
-            }
         }
     }
 }
