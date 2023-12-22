@@ -25,12 +25,7 @@ public class NetworkedPickup : NetworkBehaviour
 
     private void Update()
     {
-        Debug.Log("NetworkedPickup Update called.");
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Çalýþtý Obje Alýndý");
-            PickupObjectServerRpc();
-        }
+      
     }
 
     private void OnPickupStateChanged(bool oldState, bool newState)
